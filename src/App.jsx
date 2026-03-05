@@ -1,13 +1,16 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Features from './components/Features';
+import Products from './components/Products';
+import Specialties from './components/Specialties';
+import Testimonial from './components/Testimonial';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen lg:h-screen lg:overflow-hidden relative font-sans break-words bg-[#fbf8f1] text-[#fbf8f1] overflow-x-hidden w-full flex-col lg:flex lg:flex-col">
+    <div className="relative font-sans break-words bg-[#fbf8f1] text-[#fbf8f1] overflow-x-hidden w-full">
 
       {/* Hero Section Banner (Green) — overflow-hidden clips background shapes to this zone only */}
-      {/* TEACH: min-h instead of h means 'at least this tall but can grow'.
-          On mobile the stacked layout is taller than 85vh so we need it to grow. */}
       <div className="absolute top-0 left-0 w-full h-[80vh] bg-[#3d4f40] z-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
           {/* Subtle aesthetic organic background shapes — vw units scale with screen width */}
@@ -17,25 +20,38 @@ function App() {
       </div>
 
       {/* Simple geometric grids as a decorative element (Background Grid) */}
-      <div className="absolute inset-x-0 top-0 h-[800px] w-full max-w-7xl mx-auto flex z-10 opacity-[0.03]">
+      <div className="absolute inset-x-0 top-0 h-[800px] w-full max-w-7xl mx-auto flex z-10 opacity-[0.03] pointer-events-none">
         {[...Array.from({ length: 12 })].map((_, i) => (
           <div key={i} className="flex-1 border-r border-black/50 last:border-r-0"></div>
         ))}
       </div>
-      <div className="-inset-y-0 absolute w-full inset-x-0 max-w-[1440px] flex-col z-10 opacity-[0.03]">
-        {[...Array.from({ length: 12 })].map((_, i) => (
-          <div key={`h-${i}`} className="w-full h-24 border-b border-black/50"></div>
-        ))}
-      </div>
 
+      {/* Navbar */}
       <div className="relative z-50">
         <Navbar />
       </div>
 
-      <main className="w-full flex justify-center mt-2 lg:mt-0 lg:flex-1 z-40 relative">
-        <div className="max-w-[1440px] w-full relative h-full">
-          <Hero />
-        </div>
+      {/* Main content — normal page flow, scrollable */}
+      <main className="relative z-40 w-full">
+
+        {/* Hero — fills viewport on desktop, stacks on mobile */}
+        <Hero />
+
+        {/* Features bar */}
+        <Features />
+
+        {/* Products grid */}
+        <Products />
+
+        {/* Specialties / menu list + scrolling ticker */}
+        <Specialties />
+
+        {/* Featured testimonial */}
+        <Testimonial />
+
+        {/* Footer */}
+        <Footer />
+
       </main>
 
     </div>

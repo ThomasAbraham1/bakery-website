@@ -5,7 +5,7 @@ const Navbar = () => {
         <nav className="flex justify-between items-center w-full px-12 py-6 text-[15px] font-sans text-[#fbf8f1] z-50 relative border-b border-[#fbf8f1]/10">
             {/* Logo */}
             <div className="font-serif text-2xl tracking-wide">
-                <a href="#" className="hover:opacity-70 transition-opacity">Bakerville</a>
+                <a href="#" className="hover:opacity-70 transition-opacity">Redmoon Bakery</a>
             </div>
 
             {/* Links */}
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <a href="#" className="hover:opacity-70 transition-opacity whitespace-nowrap">Baker catalog</a>
                 <a href="#" className="hover:opacity-70 transition-opacity whitespace-nowrap">Shop now</a>
                 <a href="#" className="hover:opacity-70 transition-opacity whitespace-nowrap">Bulk orders</a>
-                <a href="#" className="hover:opacity-70 transition-opacity whitespace-nowrap">#bakerville</a>
+                <a href="#" className="hover:opacity-70 transition-opacity whitespace-nowrap">#RedmoonBakery</a>
             </div>
 
             {/* Icons */}

@@ -34,7 +34,7 @@ const Hero = () => {
                 {/* Hero Image — fills most of the width, capped at 380px */}
                 <div className="relative w-full max-w-[380px] mt-4">
                     <img
-                        src="/hero-stack.png"
+                        src="hero-stack.png"
                         alt="Delicious cookie and ice cream stack"
                         className="w-full object-contain"
                     />
@@ -107,7 +107,7 @@ const Hero = () => {
                     but behind "freshly baked" which is z-20 */}
                 <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[480px] h-[650px] z-10 flex justify-center">
                     <img
-                        src="/hero-stack.png"
+                        src="hero-stack.png"
                         alt="Delicious cookie and ice cream stack"
                         className="object-contain w-full h-full scale-[1.4]"
                     />
